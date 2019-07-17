@@ -2,7 +2,7 @@ import Photos
 import MobileCoreServices
 
 func primaryAssetResource(_ resources: [PHAssetResource]) -> PHAssetResource? {
-  let index = resources.index { resource -> Bool in
+  let index = resources.firstIndex { resource -> Bool in
     let primaryType = resource.type == .video || resource.type == .photo || resource.type == .audio
     return primaryType
   }
